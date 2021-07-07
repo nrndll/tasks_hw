@@ -13,12 +13,13 @@ user_2 = User("Victor", "McDade")
 user_repository.save(user_1)
 user_repository.save(user_2)
 
-user_repository.select_all()
-
-task = Task("walk the dog", user_1, 60)
-task_repository.save(task)
+task_1 = Task("walk the dog", user_1, 60)
+task_repository.save(task_1)
+task_2 = Task("feed the cat", user_1, 10)
+task_repository.save(task_2)
 
 print(user_repository.select_all())
 print(task_repository.select_all())
+print(user_repository.tasks(user_1))
 
-# # pdb.set_trace()
+#pdb.set_trace()
